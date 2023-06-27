@@ -1,0 +1,173 @@
+Module                  Size  Used by
+vboxnetadp             28672  0
+vboxnetflt             28672  0
+vboxdrv               573440  2 vboxnetadp,vboxnetflt
+rfcomm                 81920  16
+cmac                   16384  3
+algif_hash             16384  1
+algif_skcipher         16384  1
+af_alg                 32768  6 algif_hash,algif_skcipher
+bnep                   28672  2
+zfs                  4112384  6
+zunicode              348160  1 zfs
+zzstd                 491520  1 zfs
+zlua                  163840  1 zfs
+zavl                   16384  1 zfs
+icp                   311296  1 zfs
+zcommon               106496  2 zfs,icp
+znvpair                98304  2 zfs,zcommon
+spl                   118784  6 zfs,icp,zzstd,znvpair,zcommon,zavl
+snd_sof_pci_intel_cnl    16384  0
+snd_sof_intel_hda_common   102400  1 snd_sof_pci_intel_cnl
+soundwire_intel        40960  1 snd_sof_intel_hda_common
+soundwire_generic_allocation    16384  1 soundwire_intel
+soundwire_cadence      36864  1 soundwire_intel
+snd_sof_intel_hda      20480  1 snd_sof_intel_hda_common
+snd_sof_pci            20480  2 snd_sof_intel_hda_common,snd_sof_pci_intel_cnl
+snd_sof_xtensa_dsp     16384  1 snd_sof_intel_hda_common
+snd_hda_codec_hdmi     77824  1
+snd_sof               147456  2 snd_sof_pci,snd_sof_intel_hda_common
+snd_soc_hdac_hda       24576  1 snd_sof_intel_hda_common
+snd_hda_ext_core       32768  3 snd_sof_intel_hda_common,snd_soc_hdac_hda,snd_sof_intel_hda
+mei_hdcp               24576  0
+snd_soc_acpi_intel_match    61440  2 snd_sof_intel_hda_common,snd_sof_pci_intel_cnl
+snd_soc_acpi           16384  2 snd_soc_acpi_intel_match,snd_sof_intel_hda_common
+intel_rapl_msr         20480  0
+soundwire_bus          94208  3 soundwire_intel,soundwire_generic_allocation,soundwire_cadence
+intel_tcc_cooling      16384  0
+snd_soc_core          339968  4 soundwire_intel,snd_sof,snd_sof_intel_hda_common,snd_soc_hdac_hda
+x86_pkg_temp_thermal    20480  0
+intel_powerclamp       24576  0
+snd_hda_codec_realtek   159744  1
+snd_hda_codec_generic   102400  1 snd_hda_codec_realtek
+coretemp               24576  0
+snd_compress           24576  1 snd_soc_core
+ledtrig_audio          16384  2 snd_hda_codec_generic,snd_sof
+ac97_bus               16384  1 snd_soc_core
+snd_pcm_dmaengine      16384  1 snd_soc_core
+kvm_intel             368640  0
+snd_hda_intel          53248  5
+joydev                 32768  0
+snd_intel_dspcfg       28672  2 snd_hda_intel,snd_sof_intel_hda_common
+snd_intel_sdw_acpi     20480  2 snd_sof_intel_hda_common,snd_intel_dspcfg
+kvm                  1028096  1 kvm_intel
+nls_iso8859_1          16384  1
+snd_hda_codec         163840  5 snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec_realtek,snd_soc_hdac_hda
+rapl                   20480  0
+snd_hda_core          110592  9 snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hda_intel,snd_hda_ext_core,snd_hda_codec,snd_hda_codec_realtek,snd_sof_intel_hda_common,snd_soc_hdac_hda,snd_sof_intel_hda
+snd_hwdep              16384  1 snd_hda_codec
+intel_cstate           20480  0
+snd_pcm               143360  11 snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec,soundwire_intel,snd_sof,snd_sof_intel_hda_common,snd_compress,snd_soc_core,snd_hda_core,snd_pcm_dmaengine
+btusb                  61440  0
+btrtl                  24576  1 btusb
+hp_wmi                 20480  0
+snd_seq_midi           20480  0
+btbcm                  24576  1 btusb
+snd_seq_midi_event     16384  1 snd_seq_midi
+iwlmvm                569344  0
+sparse_keymap          16384  1 hp_wmi
+wmi_bmof               16384  0
+btintel                40960  1 btusb
+snd_rawmidi            49152  1 snd_seq_midi
+platform_profile       16384  1 hp_wmi
+input_leds             16384  0
+bluetooth             704512  43 btrtl,btintel,btbcm,bnep,btusb,rfcomm
+mac80211             1249280  1 iwlmvm
+snd_seq                77824  2 snd_seq_midi,snd_seq_midi_event
+serio_raw              20480  0
+ecdh_generic           16384  2 bluetooth
+snd_seq_device         16384  3 snd_seq,snd_seq_midi,snd_rawmidi
+ecc                    36864  1 ecdh_generic
+libarc4                16384  1 mac80211
+processor_thermal_device_pci_legacy    16384  0
+snd_timer              40960  2 snd_seq,snd_pcm
+processor_thermal_device    20480  1 processor_thermal_device_pci_legacy
+processor_thermal_rfim    24576  1 processor_thermal_device
+snd                   106496  22 snd_hda_codec_generic,snd_seq,snd_seq_device,snd_hda_codec_hdmi,snd_hwdep,snd_hda_intel,snd_hda_codec,snd_hda_codec_realtek,snd_timer,snd_compress,snd_soc_core,snd_pcm,snd_rawmidi
+iwlwifi               450560  1 iwlmvm
+processor_thermal_mbox    16384  2 processor_thermal_rfim,processor_thermal_device
+soundcore              16384  1 snd
+hid_multitouch         32768  0
+processor_thermal_rapl    20480  1 processor_thermal_device
+ucsi_acpi              16384  0
+cfg80211              974848  3 iwlmvm,iwlwifi,mac80211
+mei_me                 40960  1
+intel_rapl_common      40960  2 intel_rapl_msr,processor_thermal_rapl
+typec_ucsi             45056  1 ucsi_acpi
+intel_soc_dts_iosf     20480  1 processor_thermal_device_pci_legacy
+mei                   135168  3 mei_hdcp,mei_me
+typec                  69632  1 typec_ucsi
+intel_pch_thermal      20480  0
+int3403_thermal        20480  0
+hp_accel               28672  0
+int340x_thermal_zone    20480  2 int3403_thermal,processor_thermal_device
+lis3lv02d              28672  1 hp_accel
+int3400_thermal        20480  0
+acpi_pad              184320  0
+wireless_hotkey        16384  0
+acpi_thermal_rel       16384  1 int3400_thermal
+mac_hid                16384  0
+sch_fq_codel           20480  3
+msr                    16384  0
+parport_pc             49152  0
+ppdev                  24576  0
+lp                     28672  0
+parport                69632  3 parport_pc,lp,ppdev
+ramoops                32768  0
+reed_solomon           28672  1 ramoops
+pstore_blk             16384  0
+pstore_zone            32768  1 pstore_blk
+efi_pstore             16384  0
+ip_tables              32768  0
+x_tables               53248  1 ip_tables
+autofs4                49152  2
+btrfs                1560576  0
+blake2b_generic        20480  0
+xor                    24576  1 btrfs
+zstd_compress         229376  1 btrfs
+raid6_pq              122880  1 btrfs
+libcrc32c              16384  1 btrfs
+dm_mirror              24576  0
+dm_region_hash         24576  1 dm_mirror
+dm_log                 20480  2 dm_region_hash,dm_mirror
+i915                 3104768  49
+i2c_algo_bit           16384  1 i915
+ttm                    86016  1 i915
+drm_kms_helper        311296  1 i915
+syscopyarea            16384  1 drm_kms_helper
+sysfillrect            20480  1 drm_kms_helper
+sysimgblt              16384  1 drm_kms_helper
+fb_sys_fops            16384  1 drm_kms_helper
+hid_generic            16384  0
+crct10dif_pclmul       16384  1
+crc32_pclmul           16384  0
+ghash_clmulni_intel    16384  0
+aesni_intel           376832  4
+cec                    61440  2 drm_kms_helper,i915
+crypto_simd            16384  1 aesni_intel
+cryptd                 24576  3 crypto_simd,ghash_clmulni_intel
+rc_core                65536  1 cec
+psmouse               176128  0
+nvme                   49152  0
+drm                   622592  20 drm_kms_helper,i915,ttm
+i2c_i801               36864  0
+r8169                 102400  0
+nvme_core             135168  1 nvme
+i2c_smbus              20480  1 i2c_i801
+ahci                   45056  2
+realtek                32768  1
+libahci                45056  1 ahci
+sdhci_pci              69632  0
+intel_lpss_pci         24576  0
+i2c_hid_acpi           16384  0
+i2c_hid                36864  1 i2c_hid_acpi
+cqhci                  36864  1 sdhci_pci
+intel_lpss             16384  1 intel_lpss_pci
+xhci_pci               24576  0
+sdhci                  81920  1 sdhci_pci
+idma64                 20480  0
+xhci_pci_renesas       20480  1 xhci_pci
+wmi                    32768  2 hp_wmi,wmi_bmof
+hid                   151552  3 i2c_hid,hid_multitouch,hid_generic
+video                  65536  1 i915
+pinctrl_cannonlake     36864  3
