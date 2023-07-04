@@ -1,0 +1,25 @@
+1. Mount /home into /newhome:
+result:
+[dpa@localhost /]$ ls
+bin  boot  dev  etc  home  lib  lib64  media  mnt  newhome  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+[dpa@localhost /]$ cd newhome/
+[dpa@localhost newhome]$ ls
+dpa
+2. Create new user user_with_group:
+Result:
+[dpa@localhost ~]$ sudo adduser user_with_group
+[sudo] пароль для dpa: 
+[dpa@localhost ~]$ [dpa@localhost home]$ ls
+user_with_group
+[dpa@localhost ~]$ sudo passwd user_with_group
+Изменяется пароль пользователя user_with_group.
+Новый пароль : 
+НЕУДАЧНЫЙ ПАРОЛЬ: Пароль не прошел проверку орфографии - основан на слове из словаря
+Повторите ввод нового пароля : 
+passwd: все данные аутентификации успешно обновлены.
+3. Create group:
+[dpa@localhost var]$ sudo groupadd  priv_group
+[sudo] пароль для dpa: 
+[dpa@localhost var]$ sudo usermod -aG priv_group user_with_group
+[dpa@localhost var]$ 
+4. 
